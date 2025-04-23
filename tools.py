@@ -1,22 +1,26 @@
 class Tool:
-    def __init__(self, name, price, profit):
+    def __init__(self, item_number, name, price, profit):
+        self.item_number = item_number
         self.name = name
         self.price = price
         self.profit = profit
 
     def use(self):
-        print(f"\nYou used your { self.name } and earned ${ self.profit }!")
+        print(f'You used your { self.name } and earned ${ self.profit }!')
+
+    def buy(self, money):
+        print(f'You purchased { self.name }, you now have ${ money }')
 
     def __repr__(self):
-        return f"{ self.name } (Price: ${ self.price }, Profit: ${ self.profit })"
+        return f'{ self.item_number } { self.name } (Price: ${ self.price }, Profit: ${ self.profit })'
 
 
 
 
 tools = [
-    Tool('Teeth', 0, 1),
-    Tool('Rusty Scissors', 5, 5),
-    Tool('Push Lawnmower', 25, 50),
-    Tool('Battery-Powered Lawnmower', 250, 100),
-    Tool('Team', 500, 250)
+    Tool('1.', 'Teeth', 0, 1),
+    Tool('2.', 'Rusty Scissors', 5, 5),
+    Tool('3.', 'Push Lawnmower', 25, 50),
+    Tool('4.', 'Battery-Powered Lawnmower', 250, 100),
+    Tool('5.', 'Team', 500, 250)
 ]
